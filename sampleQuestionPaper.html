@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DRBBCMSA</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.gif" rel="icon">
+    <link href="assets/img/logo.gif" rel="icon">
+
+    <!-- Favicons
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/owl.css" rel="stylesheet">
+
+    <link href="assets/css/templatemo-edu-meeting.css" rel="stylesheet">
+    <!-- =======================================================
+  * Template Name: MeFamily
+  * Template URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between container-title">
+            <div class="row">
+                <a href="" class="logo d-flex align-items-center">
+                    <div class="col-2 col-sm-1 col-xs-2 col-md-2 logo">
+                        <img src="assets/img/logo.gif" alt="">
+                    </div>
+                    <div class="col-10 col-sm-10 col-xs-10 col-md-10 logo">
+                        <h1 class="">DR.B B CHAVAN MILITARY SCHOOL AND ACADEMY</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container-fluid container-menu mr-20" >
+
+            <div class="row">
+                <nav id="navmenu" class="navmenu text-end">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="sport.html">Sports</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li class="dropdown"><a href=""><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="gallery.html">Photo Gallery</a></li>
+                                <li><a href="Video.html">Video Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <!-- <li><a href="registration.html">Registration Form</a></li> -->
+                        <li class="dropdown"><a href=""><span>Enrollment</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="registration.html">Registration</a></li>
+                                <li><a href="sampleQuestionPaper.html">Sample Paper</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--body-->
+    <section class="container mt-3">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">📄 Sample Question Papers</h2>
+            <p class="text-muted">Download and practice with the latest sample papers</p>
+        </div>
+    
+        <div class="card shadow-lg p-4">
+            <h4 class="fw-semibold text-secondary">Available Sample Papers</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mt-3">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Subject Name</th>
+                            <th>Year</th>
+                            <th>Standard</th>
+                            <th>View PDF</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="pdfList">
+                        <!-- Data will be inserted here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        fetch('sampleQuestionPaper.json')
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.getElementById('pdfList');
+        tableBody.innerHTML = "";
+       
+        data.forEach((paper, index) => {
+            console.log("File Path:", paper.file); // Debugging log
+
+            const row = `<tr>
+                <td>${index + 1}</td>
+                <td>${paper.subject}</td>
+                <td>${paper.year}</td>
+                <td>${paper.standard ? paper.standard : 'N/A'}</td>
+                <td><a href="${paper.file}" target="_blank" class="text-danger">
+                    <i class="fa fa-file-pdf-o fa-lg"></i></a></td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    })
+    .catch(error => console.error('Error loading sample papers:', error));
+
+    </script>
+</body>
+
+<footer id="footer " class="footer dark-background ">
+    <div class="container-fluid ">
+        <div class="footer ">
+            <marquee class="mt-2 "><b style="color: #ff4444; ">Registration is available now</b> <a href="admission.html " style="color: rgb(247, 249, 250); "> Click Here </a> <b style="color: #ff4444; ">Contact Us on mobile 
+                <a class=" single " href="tel:+91 7770004697 "> 777-000-4697 </a> /<a class="single " href="tel:+91 7770004698 "> 777-000-4698</a>
+          </b> </marquee>
+            <div class="text-white "> Copyright © 2024 DRBBCMSA All rights Reserved. Designed By
+                <a href="https://sculptortechpvtltd.com/ " target="_blank " style=" color:#19c5c3; "> Sculptor Tech Pvt Ltd </a><br> <b>School Address :</b> Dr.B B Chavan School Campus Gut No 235, Khandi Pimpalgaon,Tal-Khultabad,Dist-Sambhaji Nagar
+            </div>
+        </div>
+
+        <a href="# " class="facebook-icon d-flex align-items-center justify-content-center "><i class="bi bi-facebook "></i></a>
+        <a href="# " class="instagram-icon d-flex align-items-center justify-content-center "><i class="bi bi-instagram "></i></a>
+        <a href="https://wa.me/917770004697 " target="_blank " class="whats-app d-flex align-items-center justify-content-center "><i class="bi bi-whatsapp bg-success "></i></a>
+        <a href="# " id="scroll-top " class="scroll-top d-flex align-items-center justify-content-center "><i class="bi bi-arrow-up-short "></i></a>
+
+    </div>
+
+
+    </div>
+</footer>
+
+<!-- Scroll Top -->
+
+
+<!-- Preloader -->
+<div id="preloader "></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+<script src="assets/vendor/php-email-form/validate.js "></script>
+<script src="assets/vendor/aos/aos.js "></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js "></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js "></script>
+
+<script src="vendor/jquery/jquery.min.js "></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js "></script>
+<script src="assets/js/isotope.min.js "></script>
+<script src="assets/js/owl-carousel.js "></script>
+<script src="assets/js/lightbox.js "></script>
+<script src="assets/js/tabs.js "></script>
+<script src="assets/js/video.js "></script>
+<script src="assets/js/slick-slider.js "></script>
+<script src="assets/js/custom.js "></script>
+
+
+</body>
+
+</html>

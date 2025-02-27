@@ -1,0 +1,38 @@
+[
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-V.pdf",
+        "year": "2025",
+        "standard": "5th std"
+    },
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-VI.pdf",
+        "year": "2025",
+        "standard": "6th std"
+    },
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-VII.pdf",
+        "year": "2025",
+        "standard": "7th std"
+    },
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-VIII-ENT-SQP-FINAL.pdf",
+        "year": "2025",
+        "standard": "8th std"
+    },
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-IX-ENT-SQP.pdf",
+        "year": "2025",
+        "standard": "9th std"
+    },
+    {
+        "subject": "Entrance Examination",
+        "file": "examPaper/Dr.BBCMS-X-ENT-SQP.pdf",
+        "year": "2025",
+        "standard": "10th std"
+    }
+]

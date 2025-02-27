@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DRBBCMSA</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.gif" rel="icon">
+    <link href="assets/img/logo.gif" rel="icon">
+
+    <!-- Favicons
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+
+    <!-- =======================================================
+      * Template Name: MeFamily
+      * Template URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
+      * Updated: Aug 07 2024 with Bootstrap v5.3.3
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ======================================================== -->
+</head>
+
+<body class="index-page" style="background: transparent">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between container-title">
+            <div class="row">
+                <a href="" class="logo d-flex align-items-center">
+                    <div class="col-2 col-sm-1 col-xs-2 col-md-2 logo">
+                        <img src="assets/img/logo.gif" alt="">
+                    </div>
+                    <div class="col-10 col-sm-10 col-xs-10 col-md-10 logo">
+                        <h1 class="">DR.B B CHAVAN MILITARY SCHOOL AND ACADEMY</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container-fluid container-menu mr-20">
+
+            <div class="row">
+                <nav id="navmenu" class="navmenu text-end">
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="sport.html">Sports</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li class="dropdown"><a href=""><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="gallery.html">Photo Gallery</a></li>
+                                <li><a href="Video.html">Video Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="registration.html" class="active">Registration Form</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list ms-auto"></i>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Page Title -->
+    <div class="title" >
+        <h3 class="mt-4"><span class="title">Registration Form </span></h3>
+    </div>
+    <!-- End Page Title -->
+    <!-- <section id="" class=""> -->
+    <section id="contact" class="contact section"  >
+        <div class="container-fluid" data-aos="fade-up" >
+            <div class="row bg-white  ms-0 me-0">
+                <!-- <div class="section-title mt-4">
+                <h3 class=""><span></span></h3>
+            </div> -->
+
+                <div class="col-lg-2" >
+                </div>
+
+                <div class="col-lg-8" >
+                    <div class="info-box mb-4">
+                        <!-- <form action="https://formsubmit.co/49d0651f8968358753252055c7f4eb25" method="post" role="form" class="php-email-form" id="myForm"> -->
+                        <form id="registrationform" class="php-email-form" action="javascript:void(0)" onsubmit="send();">
+                            <div class="form-group mt-0">
+                                <input type="text" name="name" class="form-control" id="studentname" placeholder="Student Full Name">
+                                <div class="error-message" id="studentnameError" style="display: none;">
+                                    <p class="text-danger">Student Name is required</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-1 form-group">
+                                    <label for="birthday"> DOB:</label>
+                                </div>
+                                <div class="col-lg-3 form-group mt-2">
+                                    <span><input type="date" id="birthdate" name="birthday">
+                               </span>
+                                    <div class="error-message" id="birthdateError" style="display: none;">
+                                        <p class="text-danger">Birth date is required</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 form-group">
+                                    <label for="std"></label>
+                                </div>
+
+                                <div class="col-lg-5 form-group">
+                                    <select name="std" id="standard">
+                                <option value="select">Select Std</option>
+                              <option value="5th">5th</option>
+                              <option value="6th">6th</option>
+                              <option value="7th">7th</option>
+                              <option value="8th">8th</option>
+                              <option value="9th">9th</option>
+                              <option value="10th">10th</option>
+                             </select>
+                                    <div class="error-message" id="standardError" style="display: none;">
+                                        <p class="text-danger">Select Standard</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=" form-group">
+                                <input type="text" class="form-control" name="name" id="mothername" placeholder="Mother Name">
+                                <div class="error-message" id="mothernameError" style="display: none;">
+                                    <p class="text-danger">Mother Name is required</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="emailid" placeholder="Email Id">
+                                <div class="error-message" id="emailidError" style="display: none;">
+                                    <p class="text-danger">Email is required</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" name="address" rows="3" id="address" placeholder="Address"></textarea>
+                                <div class="error-message" id="addressError" style="display: none;">
+                                    <p class="text-danger">Address is required</p>
+                                </div>
+                            </div>
+                            <!-- <div class=" col form-group">
+                                <input type="Dob" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="DOB" required>
+                            </div> -->
+                            <div class="col form-group mt-3">
+                                <textarea type="text" class="form-control" name="subject" rows="3" id="subject" placeholder="Current School Name And Address"></textarea>
+                                <div class="error-message" id="subjectError" style="display: none;">
+                                    <p class="text-danger">Address is required</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col form-group mt-3">
+                                    <input type="text" class="form-control" name="phone" id="mobileno1" placeholder="Parents Mobile No">
+                                    <div class="error-message" id="mobileno1Error" style="display: none;">
+                                        <p class="text-danger">Parents Mobile No is required</p>
+                                    </div>
+                                </div>
+
+                                <div class="col form-group mt-3">
+                                    <input type="text" class="form-control" name="phone" id="mobileno2" placeholder="Mobile No.2">
+                                    <div class="error-message" id="mobileno2Error" style="display: none;">
+                                        <p class="text-danger">Parents Mobile No is required</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+                                <div class="error-message" id="messageError" style="display: none;">
+                                    <p class="text-danger">Message is required</p>
+                                </div>
+                            </div>
+                            <div class="my-5 mt-2">
+                                <div class="text-center"><button type="submit">Send Message</button>
+                                </div>
+                            </div>
+                            <!-- <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Include EmailJS library -->
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                // Initialize EmailJS with  user ID
+                emailjs.init('w01dHiTJgFAozTkGh'); //change*
+
+                function send() {
+                    var studentname = document.getElementById("studentname").value.trim();
+                    var birthdate = document.getElementById("birthdate").value;
+                    var standard = document.getElementById("standard").value.trim();
+                    var emailid = document.getElementById("emailid").value.trim();
+                    var address = document.getElementById("address").value.trim();
+                    var subject = document.getElementById("subject").value.trim();
+                    var mothername = document.getElementById("mothername").value.trim();
+                    var mobileno1 = document.getElementById("mobileno1").value.trim();
+                    var mobileno2 = document.getElementById("mobileno2").value.trim();
+                    var message = document.getElementById("message").value.trim();
+
+                    // Perform validation
+                    var isValid = true;
+
+                    var studentnameError = document.getElementById("studentnameError")
+                    var birthdateError = document.getElementById("birthdateError");
+                    var standardError = document.getElementById("standardError");
+                    var emailidError = document.getElementById("emailidError");
+                    var addressError = document.getElementById("addressError");
+                    var subjectError = document.getElementById("subjectError");
+                    var mothernameError = document.getElementById("mothernameError");
+                    var mobileno1Error = document.getElementById("mobileno1Error");
+                    var mobileno2Error = document.getElementById("mobileno2Error");
+                    var messageError = document.getElementById("messageError");
+                    var numberFormatError = document.getElementById("numberFormatError");
+
+                    if (studentname === "") {
+                        studentnameError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        studentnameError.style.display = "none";
+                    }
+                    if (birthdate === "") {
+                        birthdateError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        birthdateError.style.display = "none";
+                    }
+                    if (standard === "select") {
+                        standardError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        standardError.style.display = "none";
+                    }
+
+                    if (emailid === "") {
+                        emailidError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        emailidError.style.display = "none";
+                    }
+
+                    if (address === "") {
+                        addressError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        addressError.style.display = "none";
+                    }
+
+                    if (subject === "") {
+                        subjectError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        subjectError.style.display = "none";
+                    }
+
+                    if (mothername === "") {
+                        mothernameError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        mothernameError.style.display = "none";
+                    }
+
+                    if (mobileno1 === "") {
+                        mobileno1Error.style.display = "block";
+                        isValid = false;
+                    } else if (!mobileno1.match(/^((\+91-?)|0)?[0-9]{10}$/)) {
+                        mobileno1Error.innerHTML = "<p>Invalid mobile number format</p>";
+                        mobileno1Error.style.display = "block";
+                        isValid = false;
+                    } else {
+                        mobileno1Error.style.display = "none";
+                    }
+
+                    if (mobileno2 != "" && !mobileno2.match(/^((\+91-?)|0)?[0-9]{10}$/)) {
+                        mobileno2Error.innerHTML = "<p>Invalid mobile number format</p>";
+                        mobileno2Error.style.display = "block";
+                        isValid = false;
+                    } else {
+                        mobileno2Error.style.display = "none";
+                    }
+
+                    if (message === "") {
+                        messageError.style.display = "block";
+                        isValid = false;
+                    } else {
+                        messageError.style.display = "none";
+                    }
+
+                    if (!isValid) {
+                        return false;
+                    }
+
+                    // If form is valid, proceed with sending data using EmailJS
+                    var formData = {
+                        studentname: studentname,
+                        birthdate: birthdate,
+                        standard: standard,
+                        emailid: emailid,
+                        address: address,
+                        subject: subject,
+                        mothername: mothername,
+                        mobileno1: mobileno1,
+                        mobileno2: mobileno2,
+                        message: message
+
+                    };
+
+                    // Send the form data using EmailJS
+                    emailjs.send('service_wqdiww8', 'template_abxh207', formData) //change*
+                        .then(function(response) {
+
+                            alert("Form has been submitted.");
+                            // Reset the form
+                            document.getElementById("registrationform").reset();
+                        }, function(error) {
+
+                            alert("Error submitting form. Please try again later.");
+                        });
+
+                    return false; // Prevent form submission
+                }
+            </script>
+            <div class="col-lg-2" >
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="container-fluid">
+            <div class="footer ">
+                <marquee class="mt-2 "><b style="color: #ff4444;">Registration is available now</b> <a href="admission.html " style="color: rgb(247, 249, 250); "> Click Here </a> <b style="color: #ff4444;">Contact Us on mobile 
+                    <a class=" single " href="tel:+91 7770004697 "> 777-000-4697 </a> /<a class="single " href="tel:+91 7770004698 "> 777-000-4698</a>
+              </b> </marquee>
+                <div class="text-white "> Copyright © 2024 DRBBCMSA All rights Reserved. Designed By
+                    <a href="https://sculptortechpvtltd.com/ " target="_blank " style=" color:#19c5c3; "> Sculptor Tech Pvt Ltd </a><br> <b>School Address :</b> Dr.B B Chavan School Campus Gut No 235, Khandi Pimpalgaon,Tal-Khultabad,Dist-Sambhaji Nagar
+                </div>
+            </div>
+
+            <a href="#" class="facebook-icon d-flex align-items-center justify-content-center"><i class="bi bi-facebook "></i></a>
+            <a href="#" class="instagram-icon d-flex align-items-center justify-content-center"><i class="bi bi-instagram "></i></a>
+            <a href="https://wa.me/917770004697 " target="_blank " class="whats-app d-flex align-items-center justify-content-center "><i class="bi bi-whatsapp bg-success "></i></a>
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center "><i class="bi bi-arrow-up-short "></i></a>
+
+        </div>
+
+
+        </div>
+    </footer>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
